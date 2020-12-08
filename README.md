@@ -9,13 +9,13 @@ SO: Fedora33
 VirtualBox: 6.1.16
 
 1. Install the VirtualBox
-1.1 Change to root
+1.1 Change to root.
 su or sudo -i
 
-1.2 Install rpmrebuild Package
+1.2 Install rpmrebuild Package.
 dnf install rpmrebuild
 
-1.3. Download VirtualBox-6.1-6.1.16_140961_fedora32-1.x86_64.rpm
+1.3. Download VirtualBox-6.1-6.1.16_140961_fedora32-1.x86_64.rpm.
 wget http://download.virtualbox.org/virtualbox/rpm/fedora/32/x86_64/VirtualBox-6.1-6.1.16_140961_fedora32-1.x86_64.rpm
 
 2. 
