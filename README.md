@@ -3,14 +3,17 @@
 These are the steps I did to install VirtualBox on my laptop **without disabling UEFI Secure Boot**. They're nearly similar to the process described
 on [reillysiemens' git project][reillysiemensgitproject], save for a few _key_ details. The images here
 comes from the [Systemtap UEFI Secure Boot Wiki][systemtap].
+
 **My Setup:**
 Laptop: Dell Inspirion 5548
 SO: Fedora33
 VirtualBox: 6.1.16
 
-1. Install the VirtualBox
+1. Install the VirtualBox.
+
 1.1 Change to root.
-su or sudo -i
+```su or sudo -i
+```
 
 1.2 Install rpmrebuild Package.
 dnf install rpmrebuild
