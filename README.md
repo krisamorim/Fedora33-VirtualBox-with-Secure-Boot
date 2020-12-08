@@ -12,7 +12,8 @@ VirtualBox: 6.1.16
 1. Install the VirtualBox.
 
 1.1 Change to root.
-```bash su or sudo -i ```
+```bash 
+su or sudo -i ```
 
 1.2 Install rpmrebuild Package.
 dnf install rpmrebuild
