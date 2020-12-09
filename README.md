@@ -5,9 +5,9 @@ on [reillysiemens' git project][reillysiemensgitproject], save for a few _key_ d
 comes from the [Systemtap UEFI Secure Boot Wiki][systemtap].
 
 **My Setup:**
-Laptop: Dell Inspirion 5548
-SO: Fedora33
-VirtualBox: 6.1.16
+- Laptop: Dell Inspirion 5548
+- SO: Fedora33
+- VirtualBox: 6.1.16
 
 **1. Install the VirtualBox.**
 
