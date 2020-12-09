@@ -130,8 +130,7 @@ modprobe vboxdrv
 
 [reillysiemensgitproject]: https://gist.github.com/reillysiemens/ac6bea1e6c7684d62f544bd79b2182a4
 [systemtap]: https://sourceware.org/systemtap/wiki/SecureBootandando
-[enroll mok]: https://sourceware.org/systemtap/wiki/SecureBoot?action=AttachFile&do=get&target=Screenshot_kvm-rawhide-64-uefi-1_2014-02-27_14_00_13_crop.png
-[continue]: https://sourceware.org/systemtap/wiki/SecureBoot?action=AttachFile&do=get&target=Screenshot_kvm-rawhide-64-uefi-1_2014-02-27_14_00_35_crop.png
+[enroll mok]: https://github.com/krisamorim/Fedora33-VirtualBol-with-Secure-Boot/blob/main/imgs/enrolMok.png
+[continue]: https://github.com/krisamorim/Fedora33-VirtualBol-with-Secure-Boot/blob/main/imgs/continue.png
 [confirm]: https://sourceware.org/systemtap/wiki/SecureBoot?action=AttachFile&do=get&target=Screenshot_kvm-rawhide-64-uefi-1_2014-02-27_14_00_44_crop.png
-[password]: https://sourceware.org/systemtap/wiki/SecureBoot?action=AttachFile&do=get&target=Screenshot_kvm-rawhide-64-uefi-1_2014-02-27_14_00_53_crop.png
-[reboot]: https://sourceware.org/systemtap/wiki/SecureBoot?action=AttachFile&do=get&
+[password]: https://github.com/krisamorim/Fedora33-VirtualBol-with-Secure-Boot/blob/main/imgs/password.png
