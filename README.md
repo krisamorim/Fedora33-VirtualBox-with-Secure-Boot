@@ -9,7 +9,7 @@ Laptop: Dell Inspirion 5548
 SO: Fedora33
 VirtualBox: 6.1.16
 
-1. Install the VirtualBox.
+**1. Install the VirtualBox.**
 
 1.1 Change to root.
 ```bash 
@@ -50,10 +50,68 @@ This command also build needed kernel modules.
 /usr/lib/virtualbox/vboxdrv.sh setup
 ```
 
+1.7. Add VirtualBox User(s) to vboxusers Group
+```bash
+usermod -a -G vboxusers userName
+```
+Replace userName with your own user name or some another real user name.
 
+**2. Sign virtual box modules (vboxdrv, vboxnetflt, vboxnetadp, vboxpci)**
 
-2. 
+2.1. Install mokutil package
+```bash
+sudo dnf update
+sudo dnf install mokutil
+```
+
+2.2. Create RSA key under new folder.
+```bash
+sudo -i
+mkdir /root/signed-modules
+cd /root/signed-modules
+openssl req -new -x509 -newkey rsa:2048 -keyout MOK.priv -outform DER -out MOK.der -nodes -days 36500 -subj "/CN=VirtualBox/"
+chmod 600 MOK.priv
+```
+
+2.3. This command will ask you to add a password, you need this password after the next reboot.
+```bash
+sudo mokutil --import MOK.der
+```
+
+2.4. Reboot your system and a blue screen appear:
+ 
+ select Enroll MOK
+ after select continue 
+ after put the previous password and hit enter.
+
+2.5 Put the commands below in a script to run it later (after system update)
+```bash
+cd /root/signed-modules
+vim sign-virtual-box
+Add the following cmd to this script :
+
+#!/bin/bash
+
+for modfile in $(dirname $(modinfo -n vboxdrv))/*.ko; do
+  echo "Signing $modfile"
+  /usr/src/kernels/$(uname -r)/scripts/sign-file sha256 \
+                                /root/signed-modules/MOK.priv \
+                                /root/signed-modules/MOK.der "$modfile"
+done
+```
+
+2.6. Add exec permission and run the script
+```bash
+chmod 700 sign-virtual-box
+./sign-virtual-box 
+```
+
+6- Launch VirtualBOx
+```bash
+modprobe vboxdrv
+```
+
 
 
 [reillysiemensgitproject]: https://gist.github.com/reillysiemens/ac6bea1e6c7684d62f544bd79b2182a4
-[systemtap]: https://sourceware.org/systemtap/wiki/SecureBoot
+[systemtap]: https://sourceware.org/systemtap/wiki/SecureBootandando
