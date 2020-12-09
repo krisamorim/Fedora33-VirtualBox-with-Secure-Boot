@@ -98,9 +98,6 @@ sudo mokutil --import MOK.der
 
    - Select _OK_ to reboot.
 
-   ![Reboot][reboot]
-
- after put the previous password and hit enter.
 
 2.5 Put the commands below in a script to run it later (after system update)
 ```bash
