@@ -80,8 +80,26 @@ sudo mokutil --import MOK.der
 
 2.4. Reboot your system and a blue screen appear:
  
- select Enroll MOK
- after select continue 
+   - Select Enroll MOK
+
+    ![Enroll MOK][enroll mok]
+
+   - after select continue 
+
+    ![Continue][continue]
+
+   - Select _Yes_ to enroll the keys.
+
+   ![Confirm][confirm]
+
+   - Enter the password from earlier.
+
+   ![Enter password][password]
+
+   - Select _OK_ to reboot.
+
+   ![Reboot][reboot]
+
  after put the previous password and hit enter.
 
 2.5 Put the commands below in a script to run it later (after system update)
@@ -106,7 +124,7 @@ chmod 700 sign-virtual-box
 ./sign-virtual-box 
 ```
 
-6- Launch VirtualBOx
+6- Launch VirtualBox
 ```bash
 modprobe vboxdrv
 ```
@@ -115,3 +133,8 @@ modprobe vboxdrv
 
 [reillysiemensgitproject]: https://gist.github.com/reillysiemens/ac6bea1e6c7684d62f544bd79b2182a4
 [systemtap]: https://sourceware.org/systemtap/wiki/SecureBootandando
+[enroll mok]: https://sourceware.org/systemtap/wiki/SecureBoot?action=AttachFile&do=get&target=Screenshot_kvm-rawhide-64-uefi-1_2014-02-27_14_00_13_crop.png
+[continue]: https://sourceware.org/systemtap/wiki/SecureBoot?action=AttachFile&do=get&target=Screenshot_kvm-rawhide-64-uefi-1_2014-02-27_14_00_35_crop.png
+[confirm]: https://sourceware.org/systemtap/wiki/SecureBoot?action=AttachFile&do=get&target=Screenshot_kvm-rawhide-64-uefi-1_2014-02-27_14_00_44_crop.png
+[password]: https://sourceware.org/systemtap/wiki/SecureBoot?action=AttachFile&do=get&target=Screenshot_kvm-rawhide-64-uefi-1_2014-02-27_14_00_53_crop.png
+[reboot]: https://sourceware.org/systemtap/wiki/SecureBoot?action=AttachFile&do=get&
