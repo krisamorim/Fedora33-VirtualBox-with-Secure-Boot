@@ -82,11 +82,11 @@ sudo mokutil --import MOK.der
  
    - Select Enroll MOK
 
-    ![Enroll MOK][enroll mok]
+   ![Enroll MOK][enroll mok]
 
    - after select continue 
 
-    ![Continue][continue]
+   ![Continue][continue]
 
    - Select _Yes_ to enroll the keys.
 
